@@ -1,28 +1,26 @@
 public class Notebook {
-    int weight;
     int price;
+    int year;
 
 
 
-    public Notebook(int weight, int price) {
-        this.weight = weight;
+    public Notebook( int price, int year) {
         this.price = price;
+        this.year = year;
     }
     public void checkPrice() {
 
-        if (this.price < 500) {
-            System.out.println("The computer is too light.");
+        if (this.price < 130) {
+            System.out.println("The computer is old.");}
+        {
+            if (this.price > 100) {
+                System.out.println("The computer is expensive .");
+                {
 
-            if ((this.price >= 600) && (this.price <= 1000)) {
-                System.out.println("The computer is too heavy.");
-
-                if (this.price > 1800) {
-                    System.out.println("The computer is very heavy.");
-                }
             }
         } else {
-            System.out.println(" The computer is quite light by weight.");
-
+                System.out.println(" The computer is priced right for its year of manufacture ");
+            }
 
         }
 
