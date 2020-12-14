@@ -1,30 +1,47 @@
 public class Notebook {
-    String weight;
+    int weight;
     int price;
 
-    public Notebook(String weight, int price) {
+
+
+    public Notebook(int weight, int price) {
         this.weight = weight;
         this.price = price;
     }
-
     public void checkPrice() {
 
-        if (this.price < 600 ) {
-            System.out.println("This notebook is very cheap.");
+        if (this.price < 500) {
+            System.out.println("The computer is too light.");
 
-         if (this.price <= 600-1000){
-             System.out.println("The price is good.");
+            if ((this.price >= 600) && (this.price <= 1000)) {
+                System.out.println("The computer is too heavy.");
 
-         if (this.price > 1000){
-             System.out.println("This notebook is expensive.");
-
-         }
-         }
+                if (this.price > 1800) {
+                    System.out.println("The computer is very heavy.");
+                }
+            }
         } else {
-            System.out.println("This notebook is quite expensive.");
+            System.out.println(" The computer is quite light by weight.");
+
+
         }
+
     }
+
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
