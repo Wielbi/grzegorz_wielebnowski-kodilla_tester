@@ -5,11 +5,11 @@ public class RandomNumbers {
 
         Random random = new Random();
         int a =  random.nextInt(1);
-        int b = random.nextInt(30);{
+        int b = random.nextInt(5000);
 
         for (int i = -1; i < 30; i++) ;
 
-            for (int i = 0; i > 30; i++) {
+            for (int i = 0; i > 5000; i++) {
 
 
             }
@@ -17,7 +17,7 @@ public class RandomNumbers {
 
         }
     }
-}
+
 
 
 
