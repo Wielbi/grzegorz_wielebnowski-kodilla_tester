@@ -16,7 +16,7 @@ public class User {
 
         User[] users = {Grzegorz, Wioletta, Edyta, Tata, Mama};
 
-        int Age = 0;
+        int Age = 4;
         for (User value : users) {
             Age += value.age;
 
