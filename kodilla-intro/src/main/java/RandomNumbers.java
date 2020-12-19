@@ -5,15 +5,20 @@ public class RandomNumbers {
 
         Random random = new Random();
         int a =  random.nextInt(1);
-        int b = random.nextInt(5000);
+        int b = random.nextInt(10);
 
-        for (int i = -1; i < 30; i++) ;
+        for (int i = 1; i < 2; i++) {
 
-            for (int i = 0; i > 5000; i++) {
-
-
-            }
+            for (int l = 0; l < 10; l++) {
+            a=random.nextInt(1);
+            b= random.nextInt(5);
+            
                 System.out.println(a+b);
+            }
+        }
+
+
+
 
         }
     }

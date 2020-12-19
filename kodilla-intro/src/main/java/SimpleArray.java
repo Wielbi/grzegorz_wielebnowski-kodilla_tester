@@ -7,8 +7,8 @@ public class SimpleArray {
         movies[3] = "Jacek i Placek";
         movies[4] = "Królowa Gammbit";
 
-        String movie = movies[3];
-        System.out.println(movies[3]);
+        String movie = movies[1];
+        System.out.println(movies[1]);
 
 
     }
