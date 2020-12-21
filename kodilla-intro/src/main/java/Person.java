@@ -10,6 +10,8 @@ public class Person {
         this.wiek = wiek;
         this.wzrost = wzrost;
 
+
+
         if (imie != null) {
             if (wiek > 45 && wzrost < 160) {
                 System.out.println("Użytkownik ma więcej niż 30 lat i więcej niż 160 cm") ;

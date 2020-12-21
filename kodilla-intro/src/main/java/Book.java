@@ -10,16 +10,12 @@ public class Book {
     }
     public static void main(String[] args) {
 
-        Book book = new Book("William Whorton ", "Ptasiek");
+        Book book =  Book.of("William Whorton ", "Ptasiek");
     }
         private static Book of (String author, String title ){
 
             return new Book(author, title);
-
-
-
-}
-
+    }
 }
 
 
