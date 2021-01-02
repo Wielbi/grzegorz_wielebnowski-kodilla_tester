@@ -8,7 +8,7 @@ public class Computer{
 
     protected void uruchomSystem() {
 
-        System.out.println("Komputer uruchomił sie . ");
+        System.out.println("Komputer uruchomił sie");
 
 
     }

@@ -4,8 +4,8 @@ public class Main {
     public static void main(String[] args) {
 
         Computer Asus = new Computer();
-        Asus.Windows = "turnOn";
         Asus.Windows = "turnOf";
+        Asus.Windows = "turnOn";
 
 
 
