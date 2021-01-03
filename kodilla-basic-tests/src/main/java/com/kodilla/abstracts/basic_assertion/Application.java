@@ -5,13 +5,13 @@ public class Application {
         Calculator calculator = new Calculator();
         int a = 5;
         int b = 8;
-        int subtract = calculator.subtract(a, b);
-        boolean correct = ResultChecker.assertEquals(-3,subtract );
+        int sqrt = calculator.sqrt(a);
+        boolean correct = ResultChecker.assertEquals(25,sqrt );
         if (correct) {
-            System.out.println("Metoda subtract działa poprawnie dla liczb " +  a  + " i "  + b );
-        } else {
-            System.out.println("Metoda subtract nie działapoprawnie dla liczb " + a + "i" + b );
+            System.out.println("Metoda sqrt nie działapoprawnie dla liczb " + a);
 
+        } else {
+            System.out.println("Metoda sqrt działa poprawnie dla liczb " +  a );
         }
 
     }
