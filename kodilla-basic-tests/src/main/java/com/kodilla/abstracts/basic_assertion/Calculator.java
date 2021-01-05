@@ -11,9 +11,9 @@ public  int subtract ( int a, int b){
        return ( a - b);
 
 }
-    public int sqrt ( int a) {
+    public int sqrt ( int b) {
 
-            return (int) Math.sqrt(a);
+            return (int) Math.sqrt( b);
         }
     }
 
