@@ -1,15 +1,14 @@
-package com.kodilla.basic_assertion;
+package com.kodilla.abstracts.basic_assertion;
 
-import org.junit.Test;
-
-import java.util.concurrent.Callable;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 public class CalculatorTestSuite {
 
     @Test
-    public void testsum() {
+
+    public void testSum() {
         Calculator calculator = new Calculator();
         assertEquals(13, calculator.sum(8, 5));
     }
@@ -44,25 +43,3 @@ public class CalculatorTestSuite {
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
