@@ -16,20 +16,20 @@ public class CalculatorTestSuite {
     @Test
     public void testSubstract() {
         Calculator calculator = new Calculator();
-        assertEquals(3, calculator.sum(8, 5));
+        assertEquals(3, calculator.subtract(8, 5));
     }
 
 
     @Test
     public void testExpPositiveNumber() {
         Calculator calculator = new Calculator();
-        assertEquals(500, calculator.exp(8, 3));
+        assertEquals(0, calculator.exp(8, 5));
     }
 
     @Test
     public void testExpNegativNumber() {
         Calculator calculator = new Calculator();
-        assertEquals(-500, calculator.exp(8, 5));
+        assertEquals(0, calculator.exp(8, 5));
 
     }
 
@@ -41,5 +41,9 @@ public class CalculatorTestSuite {
 
     }
 
-
+@Test
+    public void testsqrtDouble(){
+        Calculator calculator = new Calculator();
+        assertEquals(5, calculator.sqrt(25));
+}
 }
