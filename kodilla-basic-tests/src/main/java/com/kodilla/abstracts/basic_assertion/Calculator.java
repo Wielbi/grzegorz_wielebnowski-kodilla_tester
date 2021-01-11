@@ -18,8 +18,5 @@ public class Calculator {
         return (int) Math.sqrt(b);
     }
 
-    public int exp(int i, int i1) {
-        return 0;
 
-    }
 }
