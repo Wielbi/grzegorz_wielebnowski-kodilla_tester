@@ -1,23 +1,29 @@
 package com.kodilla.inheritance.homework;
 
-public class OperatingSystem extends Computer {
-    boolean turnOn = true;
-    boolean turnOf = false;
+public class OperatingSystem  {
+    private boolean isOn = false;
+    private int releaseYear;
 
+    public OperatingSystem(int releaseYear) {
+        this.releaseYear = releaseYear;
+    }
 
+    void turnOn() {
+        if (isOn) {
+            System.out.println("Operating system is already on!");
+        } else {
+            isOn = true;
+            System.out.println("Turning on OS");
+        }
+    }
 
-    void turnOn () {
-
-        turnOn = !turnOn;
-        if (turnOn)
-            turnOf = !turnOf;
-        if (turnOf)
-
-        System.out.println("System został uruchomiony");
-else
-        System.out.println("System został zamkniety");
-
-
+    void turnOff() {
+        if (isOn) {
+            isOn = false;
+            System.out.println("Turning off OS");
+        } else {
+            System.out.println("Operating system is already off!");
+        }
     }
 
 
