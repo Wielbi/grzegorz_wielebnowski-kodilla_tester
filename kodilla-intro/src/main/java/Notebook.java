@@ -1,58 +1,62 @@
 public class Notebook {
+    int weight ;
     int price;
     int year;
-    int weight;
 
 
-
-    public Notebook(int price, int year, int weight) {
+    public Notebook(int weight, int price, int year) {
+        this.weight = weight;
         this.price = price;
         this.year = year;
-        this.weight = weight;
 
     }
 
-    public void checkPrice() {
-
-        if (this.price < 130) {
-            System.out.println("The computer is old.");
+    public void chekPrice() {
+        if (this.price > 900) {
+            System.out.println("This notebook is cheap.");
         }
-
-        if (this.year == 2000) {
-            System.out.println("The computer is too old.");
+        if (this.price < 600) {
+            System.out.println("This notebook is very cheap.");
         }
-        if (150 > this.weight) {
-            System.out.println("The computer is quite light");
+        if (this.price > 600 && this.price < 1000) {
+            System.out.println("The price is good.");
         }
-        if (this.price > 100) {
-            System.out.println("The computer is expensive .");
+        if (this.price < 1000) {
+            System.out.println("This notebook is expensive.");
 
-            if (this.price < 200) {
-                System.out.println(" The computer is priced right for its year of manufacture ");
+        } else {
+            System.out.println("This notebook is quite expensive.");
+        }
+    }
+        public void checkWeight(){
+
+            if (this.weight <= 600) {
+                System.out.println("The computer is too light");
 
             }
-        } else {
-            System.out.println("Ten komputer jest zbyt stary i cieżki");
+            if (this.weight < 1200 && this.weight > 2000) {
 
+                System.out.println("The weight of the computer is just right ");
+            }
+            if (this.weight >= 3000) {
 
+                System.out.println("The computer is too heavy");
+
+            } else {
+                System.out.println();
+
+            }
+
+        }
+        public void yearPrice(){
+        if (this.price > 1200 && this.year == 2010){
+            System.out.println("This laptop is cheap compared to the year of production");
+        }else {
+            System.out.println("This laptop is too expensive and too old");
+        }
         }
     }
 
-    public void checkWeight() {
-
-        if (this.weight > 3000 ){
-            System.out.println("Komputer jest za cieżki");
-        }
-
-        if (this.weight <= 3000 && this.weight > 1000){
-            System.out.println("Waga komputera jest w sam raz");
-        }
-        if (this.weight <= 1000){
-            System.out.println("Komputer jest lekki");
-        }
-
-    }
-}
 
 
 
