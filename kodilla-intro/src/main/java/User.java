@@ -16,19 +16,20 @@ public class User {
 
         User[] users = {Grzegorz, Wioletta, Edyta, Tata, Mama};
 
-        int Age = 4;
-        for (User value : users) {
-            Age += value.age;
+            int result = 0;
+            for (int i = 0; i < users.length; i++) {
+              //  return result;
+            }
 
-          int averAge = Age / users.length;
+          int averAge =  users.length;
           double averageHeight = averAge / users.length;
           System.out.println("Średnia wieku rodziny to " +averAge );
-          System.out.println("Suma wieku uzytkowników to " + Age);
+          System.out.println("Suma wieku uzytkowników to " + users);
         }
 
 
     }
-}
+
 
 
 
