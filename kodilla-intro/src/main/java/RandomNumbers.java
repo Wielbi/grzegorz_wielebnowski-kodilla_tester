@@ -6,18 +6,22 @@ public class RandomNumbers {
         Random random = new Random();
 
 
-        for (int i = 0; i <= 30; i++) {
-            int a = random.nextInt(1);
-            int b = random.nextInt(5001);
-            System.out.println(a+b);
+        for (int i = 0; i < random.nextInt(); i++) {
+            int a = 1;
+            int b = 30;
+            int sum= a  + b ;
+            sum = 5000;
+            System.out.println(sum);
 
         }
 
-        for (int l = 0; l <= 30; l++) {
-           int a = random.nextInt(5001);
-           int b = random.nextInt(1);
+        for (int l = 0; l > random.nextInt(); l++) {
+           int a = 1;
+           int b = 30;
+           int sum = a+ b ;
+           sum = 5000;
 
-            System.out.println(a + b);
+            System.out.println(sum);
         }
     }
 

@@ -7,24 +7,22 @@ public class User {
         this.age = age;
     }
         public static void main (String[]args){
-
         User Grzegorz = new User("Grzegorz", 39);
         User Wioletta = new User("Wioletta", 37);
         User Edyta = new User("Edyta", 41);
-        User Tata = new User("Tata,", 63);
-        User Mama = new User("Mama", 61);
 
-        User[] users = {Grzegorz, Wioletta, Edyta, Tata, Mama};
-
-            int result = 0;
-            for (int i = 0; i < users.length; i++) {
-              //  return result;
+        int [] age = {39,37,41};
+            double ages = 3;
+            double sum = 3;
+            for (int i = 0; i < 3; i++) {
+            sum += age [i];
+            sum /= age.length;
             }
 
-          int averAge =  users.length;
-          double averageHeight = averAge / users.length;
-          System.out.println("Średnia wieku rodziny to " +averAge );
-          System.out.println("Suma wieku uzytkowników to " + users);
+          int Age =  age.length;
+          double averageHeight = sum / age.length;
+          System.out.println("Średnia wieku rodziny to " + sum );
+          System.out.println("Suma wieku uzytkowników to " + sum);
         }
 
 

@@ -5,9 +5,7 @@ public class Aplication {
 
         Person person = new Person("Adam", 40.5, 178);
 
-        System.out.println(person.imie);
-        System.out.println(person.wzrost);
-        System.out.println(person.wiek);
+       person.yearName();
 
     }
 }
