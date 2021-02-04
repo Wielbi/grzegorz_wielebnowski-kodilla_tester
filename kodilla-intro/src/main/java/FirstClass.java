@@ -4,6 +4,7 @@ public class  FirstClass {
        Notebook notebook = new Notebook(600, 3000,2000);
         System.out.println(notebook.weight +" "+ notebook.price + " " + notebook.year);
         notebook.chekPrice();
+        notebook.checkWeight();
 
         Notebook heavyNotebook = new Notebook(600,3500,2010);
         System.out.println(heavyNotebook.weight + " " + heavyNotebook.price+" "+ heavyNotebook.year);

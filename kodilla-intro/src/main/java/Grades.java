@@ -16,6 +16,7 @@ public class Grades {
         this.grades[this.size] = value;
         this.size++;
     }
+
 }
 
 

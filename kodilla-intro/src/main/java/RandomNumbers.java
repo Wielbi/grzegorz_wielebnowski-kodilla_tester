@@ -5,28 +5,35 @@ public class RandomNumbers {
 
         Random random = new Random();
 
+        int sum = 0;
+         int min = 31;
+         int max = 0;
 
-        for (int i = 0; i < random.nextInt(); i++) {
-            int a = 1;
-            int b = 30;
-            int sum= a  + b ;
-            sum = 5000;
+        while(sum < 5000) {
+            int losowaliczba = random.nextInt(30) + 1;
+            sum = losowaliczba + sum;
+            if (min > losowaliczba){
+                min=losowaliczba;
+
+            }
+
+            System.out.println(losowaliczba);
             System.out.println(sum);
 
-        }
 
-        for (int l = 0; l > random.nextInt(); l++) {
-           int a = 1;
-           int b = 30;
-           int sum = a+ b ;
-           sum = 5000;
-
-            System.out.println(sum);
         }
+        System.out.println(min);
+
+
+
     }
 
 
 }
+
+
+
+
 
 
 
