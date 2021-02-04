@@ -25,7 +25,7 @@ public class MojaKolorowanka {
                 System.out.println("Pierwsza litera koloru NIEBIESKIEGO TO ?"  + barwy);
                break;
             case P:
-                System.out.println("Pierwsza litera koloru POMARANCZOWEGO TO ?"  + barwy);
+                System.out.println("Pierwsza litera koloru POMARANCZOWEGO TO ? "  + barwy);
             default:
         }
 

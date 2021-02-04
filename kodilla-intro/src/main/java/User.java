@@ -14,9 +14,9 @@ public class User {
         int [] age = {39,37,41};
             double ages = 3;
             double sum = 3;
-            for (int i = 0; i < 3; i++) {
+            for (int i = 0; i < age.length; i++) {
             sum += age [i];
-            sum /= age.length;
+
             }
 
           int Age =  age.length;
