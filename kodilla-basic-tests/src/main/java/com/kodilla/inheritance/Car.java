@@ -8,18 +8,16 @@ public class Car {
     public Car(int wheels, int seats) {
         this.wheels = wheels;
         this.seats = seats;
+
     }
 
-    public Car() {
-        System.out.println("Car constructor");
-    }
-
-    public void turnOnLights() {
+    public void turnOnLight() {
         System.out.println("Lights were turned on");
+
     }
 
-    public void openDoors() {
-        System.out.println("Opening 4 doors");
+    public void openDoor() {
+        System.out.println("Opening 4 doors ");
 
     }
 
@@ -30,4 +28,11 @@ public class Car {
     public int getSeats() {
         return seats;
     }
+
+    public void displayNumberOfSeats() {
+        System.out.println("Number of seats: " + seats);
+
+
+    }
 }
+
