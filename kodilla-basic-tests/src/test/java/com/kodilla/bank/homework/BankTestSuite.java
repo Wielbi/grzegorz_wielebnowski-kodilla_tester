@@ -11,7 +11,6 @@ class BankTestSuite {
 
     @Test
     void getTotalCashAmount() {
-
         Bank bank = new Bank();
         bank.setCashMachines(new CashMachine[]{
                 new CashMachine(),
@@ -22,14 +21,13 @@ class BankTestSuite {
     void getTotalWithdrawsCount(){
         Bank bank = new Bank();
        int wynik= bank.getTotalDepositsCount();
-       assertEquals(1,wynik );
+       assertEquals(200,wynik );
 
-
-        }
-
-        @Test
+    }
+    @Test
     void getTotalDepositsCount() {
         Bank bank = new Bank();
-        bank.getTotalDepositsCount();
+       int wynik =  bank.getTotalDepositsCount();
+       assertEquals(12, wynik);
     }
 }

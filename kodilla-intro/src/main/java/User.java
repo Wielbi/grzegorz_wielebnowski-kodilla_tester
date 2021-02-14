@@ -38,14 +38,14 @@ public class User {
         double averageHeight = sum / osoby.length;
 
 
-        for (int i = 0; i < osoby.length; i++){
-            if (osoby[i].getAge() < averageHeight){
+        for (int i = 0; i < osoby.length; i++) {
+            if (osoby[i].getAge() < averageHeight) {
 
 
                 System.out.println("Najmłodszy użytkownik to " + osoby[i].getName());
             }
-
         }
+
 
         // tworzymy petle w której bedziemy przechodzic przez urzytkowników ( jak wyżej )
         // w petli powinien byc if który sprawdza czy urzytkownik ma wiek wiekszy niz sredni wiek urzytkowników
