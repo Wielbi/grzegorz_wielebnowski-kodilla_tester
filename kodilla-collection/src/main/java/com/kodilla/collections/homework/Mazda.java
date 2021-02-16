@@ -7,7 +7,6 @@ public class Mazda implements Car {
     public Mazda( int speed){
         this.speed = speed;
     }
-
     public int getSpeed() {
         return speed;
     }
