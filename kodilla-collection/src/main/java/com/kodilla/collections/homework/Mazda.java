@@ -11,7 +11,7 @@ public class Mazda implements Car {
         return speed;
     }
     public void increaseSpeed() {
-        this.speed +=98;
+        this.speed +=55;
     }
     public void decreaseSpeed() {
         this.speed -= 23;
