@@ -16,4 +16,6 @@ public class Mazda implements Car {
     public void decreaseSpeed() {
         this.speed -= 23;
     }
+
+
 }

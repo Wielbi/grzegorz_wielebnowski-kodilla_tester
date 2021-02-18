@@ -19,4 +19,6 @@ public class Opel implements Car {
     public void decreaseSpeed() {
        this.speed -=23;
     }
+
+
 }
