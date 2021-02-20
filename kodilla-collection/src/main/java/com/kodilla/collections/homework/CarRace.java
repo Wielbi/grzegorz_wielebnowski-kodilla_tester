@@ -10,7 +10,7 @@ public class CarRace {
         Opel opel = new Opel(112);
         doRace(opel);
 
-        Mazda mazda = new Mazda(28);
+        Mazda mazda = new Mazda(96);
         doRace(mazda);
 
     }

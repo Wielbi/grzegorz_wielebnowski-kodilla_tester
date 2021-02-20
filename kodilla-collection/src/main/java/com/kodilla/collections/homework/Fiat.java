@@ -15,8 +15,16 @@ public class Fiat implements Car {
         this.speed += 10;
     }
 
+    @Override
+    public String toString() {
+        return "Fiat{" +
+                "speed=" + speed +
+                '}';
+    }
+
     public void decreaseSpeed() {
         this.speed -= 10;
+
 
     }
 
