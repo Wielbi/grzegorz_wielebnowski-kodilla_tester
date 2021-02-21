@@ -9,21 +9,24 @@ public class Stamp {
     private int width;
 
 
-    public Stamp( String stampName, String installed,int length, int width){
+    public Stamp(String stampName, String installed, int length, int width) {
         this.stampName = stampName;
         this.installed = installed;
         this.length = length;
         this.width = width;
 
     }
-    public String getStampName(){
+
+    public String getStampName() {
         return stampName;
     }
-    public String getInstalled(){
+
+    public String getInstalled() {
         return installed;
 
     }
-    public int getLength(){
+
+    public int getLength() {
         return length;
     }
 
@@ -53,7 +56,7 @@ public class Stamp {
                 '}';
     }
 
-    public int getWidth(){
+    public int getWidth() {
         return width;
 
 
