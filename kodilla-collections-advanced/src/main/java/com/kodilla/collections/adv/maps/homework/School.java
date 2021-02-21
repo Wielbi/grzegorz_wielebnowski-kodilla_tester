@@ -6,7 +6,7 @@ import java.util.List;
 public class School {
     private List<Double> school = new ArrayList<>();
 
-    public School(double... principal) {
+    public School(double... school) {
         for (double clas : school)
             this.school.add(clas);
     }
@@ -16,9 +16,9 @@ public class School {
         return "School" + school.toString();
 
     }
-
-
 }
+
+
 
 
 

@@ -1,6 +1,6 @@
 package com.kodilla.collections.adv.maps.homework;
 
-import com.kodilla.collections.adv.maps.complex.Student;
+
 
 import java.util.HashMap;
 import java.util.Map;
@@ -26,7 +26,8 @@ public class SchoolDirectory {
 
         System.out.println(school.get(marek));
 
-       for (Map.Entry<Principal,School>principalEntry : school.entrySet())
-        System.out.println(principalEntry.getKey().getFirstName() + " ilość  " + school.toString());
+       for (Map.Entry<Principal,School>principal : school.entrySet())
+        System.out.println(principal.getKey().getFirstName()
+                + " ilość  " + principal.getValue());
     }
 }
