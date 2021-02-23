@@ -23,10 +23,13 @@ public class GeneralCarsListApplication {
         cars.remove(2);
         boolean remove = cars.remove(opel);
 
+
         System.out.println(cars.size());
         for (Car car : cars){
             System.out.println(cars + ",Mazda " + car.getSpeed() +
                     ",Opel " + car.getSpeed() + ",Fiat " + car.getSpeed());
+
+
         }
 
     }
