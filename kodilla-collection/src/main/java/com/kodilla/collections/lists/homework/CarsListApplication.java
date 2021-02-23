@@ -12,6 +12,7 @@ import java.util.List;
 public class CarsListApplication {
     public static void main(String[] args) {
         List<Car> cars = new ArrayList<>();
+
         cars.add(new Fiat(63));
         cars.add(new Opel(112));
         cars.add(new Mazda(96));
