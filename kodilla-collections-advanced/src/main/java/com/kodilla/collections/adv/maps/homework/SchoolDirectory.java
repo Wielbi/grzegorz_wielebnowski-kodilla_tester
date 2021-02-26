@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class SchoolDirectory {
     public static void main(String[] args) {
-        Map<Principal, School> school = new HashMap<>();
+        Map<School, Principal> principalMap = new HashMap<>();
 
         Principal marek = new Principal("Marek", "Podstawowa");
         Principal grzegorz = new Principal("Grzegorz", "Średnia ");
@@ -19,16 +19,18 @@ public class SchoolDirectory {
         School januszSchool = new School(56);
         School wojciechSchool = new School(47);
 
-        school.put(marek, marekSchool);
-        school.put(grzegorz, grzegorzSchool);
-        school.put(janusz, januszSchool);
-        school.put(wojciech, wojciechSchool);
+        principalMap.put( marekSchool, marek);
+        principalMap.put( grzegorzSchool, grzegorz);
+        principalMap.put( januszSchool, janusz);
+        principalMap.put(wojciechSchool,wojciech);
 
-        System.out.println(school.get(janusz));
+        System.out.println(principalMap.get(marekSchool));
 
-        for (Map.Entry<Principal, School> principal : school.entrySet())
-            System.out.println(principal.getKey().getNameschool()
-                    + " jaka szkoła " + principal.toString());
+
+        for (Map.Entry<School, Principal> principalSchoolEntry : principalMap.entrySet())
+            System.out.println(principalSchoolEntry.getKey()
+                    + " jaki dyrektor " + principalSchoolEntry.getValue());
+
     }
 
 }
