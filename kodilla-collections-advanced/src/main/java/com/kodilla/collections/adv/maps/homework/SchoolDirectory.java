@@ -14,10 +14,10 @@ public class SchoolDirectory {
         Principal janusz = new Principal("Janusz", "Liceum");
         Principal wojciech = new Principal("Wojciech", "Technikum");
 
-        School marekSchool = new School(24);
-        School grzegorzSchool = new School(35);
-        School januszSchool = new School(56);
-        School wojciechSchool = new School(47);
+        School marekSchool = new School(24,23,21);
+        School grzegorzSchool = new School(35,15,25);
+        School januszSchool = new School(56,32,24);
+        School wojciechSchool = new School(47,21,25);
 
         principalMap.put( marekSchool, marek);
         principalMap.put( grzegorzSchool, grzegorz);
