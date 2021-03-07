@@ -35,13 +35,13 @@ class DictionaryTestSuite {
         dictionary.addWord("gra", new EnglishWord(PartOfSpeech.NOUN, "game"));
         dictionary.addWord("grać", new EnglishWord(PartOfSpeech.NOUN, "play"));
         //when
-        List<EnglishWord> result = dictionary.findEnglishWord("gra");
+        List<EnglishWord> result = dictionary.findEnglishWord("gra", PartOfSpeech.NOUN);
         //then
         List<EnglishWord> expectedList = new ArrayList<>();
         expectedList.add(new EnglishWord(PartOfSpeech.NOUN, "play"));
         expectedList.add(new EnglishWord(PartOfSpeech.NOUN, "game"));
 
-        assertEquals(2, result.size());
+        assertEquals(2, result);
     }
 
     @Test
@@ -54,7 +54,14 @@ class DictionaryTestSuite {
         dictionary.addWord("grać",new EnglishWord(PartOfSpeech.NOUN,"play"));
         //when
         List<EnglishWord> result = dictionary.findEnglishWord("brać",PartOfSpeech.NOUN);
-        expectedList.add(new EnglishWord(PartOfSpeech.NOUN,"btotherhood"));
+        //then
+        List<EnglishWord> expectedList = new ArrayList<>();
+        expectedList.add(new EnglishWord(PartOfSpeech.NOUN, "brotherhood"));
+        assertEquals(expectedList,result);
+
+
+
+
 
     }
 }

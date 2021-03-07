@@ -6,24 +6,28 @@ public class EnglishWord {
     private PartOfSpeech partOfSpeech;
     private String word;
 
-    public EnglishWord(PartOfSpeech partOfSpeech, String word){
+    public EnglishWord(PartOfSpeech partOfSpeech, String word) {
         this.partOfSpeech = partOfSpeech;
         this.word = word;
 
     }
-    private PartOfSpeech getPartOfSpeech(){
+
+    PartOfSpeech getPartOfSpeech() {
         return partOfSpeech;
 
     }
-    private String getWord(){
+
+    private String getWord() {
         return word;
 
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
         EnglishWord that = (EnglishWord) o;
         return partOfSpeech == that.partOfSpeech &&
                 Objects.equals(word, that.word);

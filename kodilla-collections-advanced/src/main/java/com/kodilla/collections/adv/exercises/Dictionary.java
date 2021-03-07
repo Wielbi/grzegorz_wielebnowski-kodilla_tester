@@ -1,6 +1,5 @@
 package com.kodilla.collections.adv.exercises;
 
-import java.awt.font.FontRenderContext;
 import java.util.*;
 
 public class Dictionary {
@@ -14,8 +13,15 @@ public class Dictionary {
 
     }
 
-    public List<EnglishWord> findEnglishWord(String polishword) {
-        return Collections.emptyList();
+    public List<EnglishWord> findEnglishWord(String polishWord, PartOfSpeech noun) {
+        List<EnglishWord>result = new ArrayList<>();
+        for (EnglishWord englishWord: dictionary.getOrDefault(polishWord,Collections.emptyList())){
+
+            if (englishWord.getPartOfSpeech().equals(polishWord))
+                result.add(englishWord);
+        }
+        return result;
+
 
     }
 
@@ -26,7 +32,8 @@ public class Dictionary {
     }
 
     public List<EnglishWord> findEnglishWords(String polishWord) {
-        return dictionary.getOrDefault(polishWord, Collections.emptyList());
+        return dictionary.getOrDefault(polishWord,
+                Collections.emptyList());
 
     }
 }
