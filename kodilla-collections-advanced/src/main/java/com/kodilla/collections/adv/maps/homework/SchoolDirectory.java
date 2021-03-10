@@ -27,9 +27,11 @@ public class SchoolDirectory {
         System.out.println(principalMap.get(marekSchool));
 
 
+
         for (Map.Entry<School, Principal> principalSchoolEntry : principalMap.entrySet())
             System.out.println(principalSchoolEntry.getKey()
-                    + " jaki dyrektor " + principalSchoolEntry.getValue());
+                    + " jaki dyrektor " + principalSchoolEntry.getValue() +
+                    " ilosc uczniów " + principalSchoolEntry.getKey().getAllStudents());
 
     }
 

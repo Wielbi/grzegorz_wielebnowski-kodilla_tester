@@ -1,9 +1,6 @@
 package com.kodilla.collections.adv.exercises.homework;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class FlightRepository {
 
@@ -15,8 +12,8 @@ public class FlightRepository {
 
     }
 
-    private Object addFlight() {
+    public List<Flight>flightFinder(String Flight){
+        return
 
-        return null;
     }
 }

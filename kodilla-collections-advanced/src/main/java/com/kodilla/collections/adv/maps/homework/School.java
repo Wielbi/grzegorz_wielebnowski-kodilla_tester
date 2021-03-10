@@ -11,6 +11,16 @@ public class School {
         for (double clas : school)
             this.school.add(clas);
     }
+    public int getAllStudents(){
+        int sum = 0;
+        for(Double clas : school){
+            sum += clas;
+
+        }
+            return sum;
+
+
+    }
 
 
     @Override
