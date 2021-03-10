@@ -8,10 +8,14 @@ public class BookManager {
 
     public static Book createBook(String title, String author) {
         Book result = new Book(title, author);
-
-        bookList.add(result);
+        if (!bookList.contains(result)) {
+            bookList.add(result);
+            System.out.println("Dodaje ksiazke do listy ");
+        }
 
         return result;
+
+
     }
 
 
