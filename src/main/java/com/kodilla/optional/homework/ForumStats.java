@@ -7,8 +7,8 @@ public class ForumStats {
         double frs = UsersRepository.getUsersList()
 
                 .stream()
-                .map(u->u.getNumberOfPost())
-                .mapToInt(N->N)
+                .map(u->u.getAge())
+                .mapToInt(N-> N)
                 .average()
                 .getAsDouble();
         System.out.println(frs);
