@@ -1,15 +1,17 @@
 package com.kodilla.stream.homework;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 public class TaskManager {
     public static void main(String[] args) {
-       // List<String> taskname = TaskRepository.getTask()
-              // .stream()
-              //  .filter(p->p.getDeadline().equals("Mleko"))
-               // .map(Task::getDeadline)
-              // .collect(Collector.of("Jajka"));
+        List<LocalDate> taskname = TaskRepository.getTask()
+                .stream()
+                .filter(p -> p.getDeadline().isAfter(LocalDate.now()))
+                .map(Task::getDeadline)
+                .collect(Collectors.toList());
 
     }
 }
