@@ -17,6 +17,20 @@ public class Grades {
         this.size++;
     }
 
+    public int returnTheLastRating() {
+        return grades[size - 1];
+    }
+
+    public double returnTheAverageOfTheRatings() {
+        double sum = 0;
+        for (int i = 0; i < size - 1; i++) {
+            sum += grades[i];
+
+        }
+        return sum/(size - 1);
+
+    }
+
 }
 
 
