@@ -11,7 +11,7 @@ public class WarehouseApp {
         warehouse.addOrder(new Order("4"));
 
         try{
-            warehouse.getOrder("4");
+            warehouse.getOrder("8");
             System.out.println("Znaleziono zamówienie");
         } catch (OrderDoesntExistException e) {
             System.out.println("Nie znaleziono zamówienia ");
