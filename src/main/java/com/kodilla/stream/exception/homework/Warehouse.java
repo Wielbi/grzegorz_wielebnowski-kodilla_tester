@@ -12,19 +12,19 @@ public class Warehouse {
         orderList.add(order);
 
     }
+
     public Order getOrder(String number) throws OrderDoesntExistException {
         List<Order> resultList = orderList.stream()
                 .filter(order -> order.getNumber().equals(number))
                 .collect(Collectors.toList());
-       if (resultList.size() > 0 ){
-           return resultList.get(0);
+        if (resultList.size() > 0) {
+            return resultList.get(0);
 
-       }else {
-           throw new OrderDoesntExistException();
-           }
-       }
-
+        } else {
+            throw new OrderDoesntExistException();
+        }
     }
+}
 
 
 
