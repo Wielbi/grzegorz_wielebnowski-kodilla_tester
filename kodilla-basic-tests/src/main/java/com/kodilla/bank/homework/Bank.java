@@ -1,6 +1,11 @@
 package com.kodilla.bank.homework;
 public class Bank {
-    private CashMachine[] cashMachines;
+    public CashMachine[] cashMachines;
+
+    public int getMachineAmount(){
+        return cashMachines.length;
+
+    }
 
     public void setCashMachines(CashMachine[] cashMachines) {
         this.cashMachines = cashMachines;
@@ -9,7 +14,6 @@ public class Bank {
         this.cashMachines = new CashMachine[10];
 
     }
-
     public int getTotalCashAmount() {
         int result = 0;
         for (int i = 0; i < 10; i++) {

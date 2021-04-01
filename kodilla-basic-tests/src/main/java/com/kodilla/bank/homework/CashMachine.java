@@ -9,6 +9,7 @@ public class CashMachine {
     public CashMachine() {
         this.transactions = new int[10];
         this.transactionCount = 0;
+        this.cashAmount = 1000 ;
     }
 
     public int getTransactionCount() {

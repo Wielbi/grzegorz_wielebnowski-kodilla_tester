@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.util.concurrent.Callable;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class BankTestSuite {
 
@@ -15,8 +16,15 @@ class BankTestSuite {
         bank.setCashMachines(new CashMachine[]{
                 new CashMachine(),
                 new CashMachine()});
-    }
+        int TotalCashAmount = 0;
+        for (int i  = 0; i < bank.getMachineAmount(); i++){
+            TotalCashAmount += bank.cashMachines[i].getCashAmount();
+        }
+        assertEquals(2000,TotalCashAmount);
 
+
+    }
+// TODO : napisać testy
     @Test
     void getTotalWithdrawsCount(){
         Bank bank = new Bank();
