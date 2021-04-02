@@ -13,16 +13,13 @@ class FlightFinderTestSuite {
         FlightFinder flightFinder = new FlightFinder();
         List<Flight> result = flightFinder.flightFlightsFrom("Lizbona");
         Assert.assertEquals(3, result.size());
-
     }
-
     @Test
     public void testflightFlightsTo() {
         FlightFinder flightFinder = new FlightFinder();
         List<Flight> result = flightFinder.flightFlightsTo("Londyn");
         Assert.assertEquals(1, result.size());
     }
-
     @Test
     public void testflightFlightstTo() {
         FlightFinder flightFinder = new FlightFinder();

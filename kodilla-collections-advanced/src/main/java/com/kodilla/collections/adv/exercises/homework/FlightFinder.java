@@ -17,7 +17,6 @@ public class FlightFinder {
         }
         return result;
     }
-
     public List<Flight> flightFlightsTo(String arrival) {
         List<Flight> flights = FlightRepository.getFlightsTable();
         List<Flight> result = new ArrayList<>();
@@ -27,8 +26,6 @@ public class FlightFinder {
                 result.add(flight);
             }
         }
-
-
         return result;
     }
 }
