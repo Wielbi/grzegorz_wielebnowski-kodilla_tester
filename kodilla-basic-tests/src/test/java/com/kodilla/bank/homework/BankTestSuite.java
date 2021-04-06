@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class BankTestSuite {
 
     @Test
-    void getTotalCashAmount() {
+   public void getTotalCashAmount() {
         Bank bank = new Bank();
         bank.setCashMachines(new CashMachine[]{
                 new CashMachine(),
@@ -21,21 +21,34 @@ class BankTestSuite {
             TotalCashAmount += bank.cashMachines[i].getCashAmount();
         }
         assertEquals(2000,TotalCashAmount);
-
-
     }
-// TODO : napisać testy
     @Test
-    void getTotalWithdrawsCount(){
+    public void getTotalWithdrawsCount(){
         Bank bank = new Bank();
-       int wynik= bank.getTotalDepositsCount();
-       assertEquals(200,wynik );
+        bank.setCashMachines(new CashMachine[]{
+                new CashMachine(),
+                new CashMachine()});
+        int TotalWithdrawsCount = 0;
+        for (int i = 0 ; i < bank.cashMachines.length; i ++){
+            TotalWithdrawsCount += bank.cashMachines[i].getTransactionCount();
+        }
+        assertEquals(6,TotalWithdrawsCount );
 
     }
     @Test
     void getTotalDepositsCount() {
         Bank bank = new Bank();
-       int wynik =  bank.getTotalDepositsCount();
-       assertEquals(12, wynik);
+        CashMachine cashMachine = new CashMachine();
+        cashMachine.depositTransaction();
+        cashMachine.withDrawTransaction();
+        cashMachine.withDrawTransaction();
+      bank.setCashMachines(new CashMachine[]{
+             cashMachine});
+      int TotalDepositsCount = 0;
+      for (int i = 0 ; i < bank.cashMachines.length; i ++){
+          TotalDepositsCount += bank.cashMachines[i].getDepositCount();
+
+              }
+       assertEquals(1,TotalDepositsCount );
     }
 }

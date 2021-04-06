@@ -13,8 +13,8 @@ public class UserValidatorTestSuite {
     @ParameterizedTest
     @ValueSource(strings = {"wg.ratownik@gmail.com", "szturmarcel@gmail.com" })
     public void testvalidateEmail(String email){
-        UserValidator userValidator = new UserValidator();  // żeby wywołac metode trzeba stworzyc obiekt  gdzie znajduje sie metoda!!!
-        boolean result = userValidator.validateEmail(email);  // wjako argument przekazujemy argument metody testowej (email),
+        UserValidator userValidator = new UserValidator();  // żeby wywołac metode trzeba stworzyc obiekt ( obiektem jest clasa w której znajduje sie metoda testowana) gdzie znajduje sie metoda!!!
+        boolean result = userValidator.validateEmail(email);  // jako argument przekazujemy argument metody testowej (email),
         assertTrue(result);
 
     }
