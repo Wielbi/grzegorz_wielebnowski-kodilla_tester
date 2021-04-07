@@ -1,4 +1,4 @@
-public class Grades {
+public class Grade {
     private int[] grades;
     private int size;
 
@@ -26,12 +26,10 @@ public class Grades {
         for (int i = 0; i < size - 1; i++) {
             sum += grades[i];
 
+
         }
         return sum/(size - 1);
 
     }
 
 }
-
-
-
