@@ -26,6 +26,7 @@ public class Grade {
         for (int i = 0; i < size - 1; i++) {
             sum += grades[i];
 
+
         }
         return sum/(size - 1);
 
