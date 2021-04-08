@@ -40,11 +40,14 @@ class BankTestSuite {
     void getTotalDepositsCount() {
         Bank bank = new Bank();
         CashMachine cashMachine = new CashMachine();
-        cashMachine.depositTransaction(100);
-        cashMachine.withDrawTransaction(50);
-        cashMachine.withDrawTransaction(20);
-
         System.out.println(Arrays.toString(cashMachine.getTransactions()));
+        cashMachine.depositTransaction(100);
+        System.out.println(Arrays.toString(cashMachine.getTransactions()));
+        cashMachine.withDrawTransaction(50);
+        System.out.println(Arrays.toString(cashMachine.getTransactions()));
+        cashMachine.withDrawTransaction(20);
+        System.out.println(Arrays.toString(cashMachine.getTransactions()));
+
       bank.setCashMachines(new CashMachine[]{
              cashMachine});
       int TotalDepositsCount = 0;

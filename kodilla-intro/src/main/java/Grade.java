@@ -2,7 +2,7 @@ public class Grade {
     private int[] grades;
     private int size;
 
-    public Grades() {
+    public Grade() {
         this.grades = new int[10];
         this.size = 0;
 

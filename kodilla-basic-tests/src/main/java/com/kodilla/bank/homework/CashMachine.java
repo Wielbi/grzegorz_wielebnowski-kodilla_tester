@@ -13,8 +13,6 @@ public class CashMachine {
         this.transactionPosition = 0;
 
     }
-
-
     public int getTransactionCount() {
         return transactionCount;
     }
