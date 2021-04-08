@@ -38,14 +38,18 @@ public class CashMachine {
         }
         return result;
     }
-    public void depositTransaction(){
-        transactions[transactionPosition] = 1;
+    public void depositTransaction(int amount){
+        transactions[transactionPosition] = amount;
         transactionPosition ++;
 
     }
-    public void withDrawTransaction(){
-        transactions[transactionPosition] = -1;
+    public void withDrawTransaction(int amount){
+        transactions[transactionPosition] = -amount;
         transactionPosition ++;
 
+    }
+
+    public int[] getTransactions() {
+        return transactions;
     }
 }

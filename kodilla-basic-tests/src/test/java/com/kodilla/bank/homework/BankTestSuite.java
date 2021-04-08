@@ -3,6 +3,7 @@ package com.kodilla.bank.homework;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
 import java.util.concurrent.Callable;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -39,9 +40,11 @@ class BankTestSuite {
     void getTotalDepositsCount() {
         Bank bank = new Bank();
         CashMachine cashMachine = new CashMachine();
-        cashMachine.depositTransaction();
-        cashMachine.withDrawTransaction();
-        cashMachine.withDrawTransaction();
+        cashMachine.depositTransaction(100);
+        cashMachine.withDrawTransaction(50);
+        cashMachine.withDrawTransaction(20);
+
+        System.out.println(Arrays.toString(cashMachine.getTransactions()));
       bank.setCashMachines(new CashMachine[]{
              cashMachine});
       int TotalDepositsCount = 0;
