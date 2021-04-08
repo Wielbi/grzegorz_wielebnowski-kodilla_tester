@@ -1,30 +1,28 @@
 package com.kodilla.abstracts.homework;
 
 public class Triangle extends Shape {
+    public double H;
+    public double A;
+    public  double B;
+    public double C;
 
-    private double base;
-    private double height;
 
-    public Triangle(double b, double h) {
-        base = b;
-        height = h;
+    public Triangle(double h, double a,double b, double c) {
+        H = h;
+        A = a;
+        B = b;
+        C = c;
+
     }
 
     @Override
-    protected void countArea() {
-        super.area = 0.5 * height * base;
+    public double getArea() {
+        return 0.5 * A * H ;
 
     }
 
-    public String toString() {
-        return super.toString() + "type: triangle";
-
-    }
-
-    public static void main(String[] args) {
-        Triangle a = new Triangle(4.1, 3.9);
-
-        System.out.println(a.getArea());
+    @Override
+    public double getCircuit() {
+        return A + B + C ;
     }
 }
-

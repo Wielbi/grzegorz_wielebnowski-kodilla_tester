@@ -2,33 +2,25 @@ package com.kodilla.abstracts.homework;
 
 public class Circle extends Shape {
 
-    private double ray;
+public double PI = 3.14;
+public double R;
 
-    public Circle(double ray) {
-        this.ray = ray;
+    public Circle(double R) {
+       this.R = R;
 
     }
-
 
     @Override
-    protected void countArea() {
-        super.area = Math.PI * ray * ray;
+    public double getArea() {
+        return PI* R*R;
 
     }
 
-    public String toString() {
-
-        return super.tuString() + " type: circle";
-    }
-
-    public static void main(String[] args) {
-        Circle roundy = new Circle(3.4);
-
-        System.out.println(roundy.toString());
-
+    @Override
+    public double getCircuit() {
+        return 2 * PI *R;
     }
 }
-
 
 
 

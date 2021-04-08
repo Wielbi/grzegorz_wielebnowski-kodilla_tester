@@ -1,11 +1,18 @@
 package com.kodilla.abstracts.homework;
 
-public class Person extends Profession {
+public class Person {
 
-    String firstName = "Grzegorz";
-    int age = 39;
-    String job = "Ratownik ";
+   public String firstName;
+   public int age;
+   public Job job;
 
+    public Person(String firstName, int age, Job job) {
+        this.firstName = firstName;
+        this.age = age;
+        this.job = job;
+    }
+    public String getResponsibilities(){
+        return job.getResponsibilities();
 
+    }
 }
-
