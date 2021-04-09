@@ -14,8 +14,10 @@ public class Calculator {
     }
 
     public int sqrt(int b) {
-
-        return (int) Math.sqrt(b);
+        if (b < 0){
+            return 0;
+        }
+            return (int) Math.sqrt(b);
     }
 
 

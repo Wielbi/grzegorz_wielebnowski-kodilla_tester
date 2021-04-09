@@ -24,5 +24,7 @@ public class CalculatorTestSuite {
     public void testsqrtDouble() {
         Calculator calculator = new Calculator();
         assertEquals(5, calculator.sqrt(25));
+        assertEquals(0, calculator.sqrt(0));
+        assertEquals(0, calculator.sqrt(-25));
     }
 }
