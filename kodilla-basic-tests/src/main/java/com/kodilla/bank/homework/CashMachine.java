@@ -9,7 +9,6 @@ public class CashMachine {
     public CashMachine() {
         this.transactions = new int[10];
         this.transactionCount = 3;
-        this.cashAmount = 1000;
         this.transactionPosition = 0;
 
     }
@@ -18,7 +17,12 @@ public class CashMachine {
     }
 
     public int getCashAmount() {
-        return cashAmount;
+        int sum = 0;
+        for (int i = 0; i < transactions.length ; i++){
+            sum += transactions[i];
+
+        }
+        return sum;
     }
 
     public int getWithdrawsCount() {
@@ -50,4 +54,45 @@ public class CashMachine {
     public int[] getTransactions() {
         return transactions;
     }
+    public double depositAverage(){
+        double result = 0;
+        double counter = 0;
+        for (int i = 0 ; i < transactions.length ; i++){
+            if (transactions[i]> 0 ) {
+                result += transactions[i];
+                counter ++;
+            }
+        }
+        return result /counter;
+
+    }
+    public double withdrawsAverage(){
+        double result = 0;
+        double counter = 0;
+        for (int i = 0; i < transactions.length; i++){
+            if (transactions[i]<0) {
+                result+=transactions[i];
+                counter++;
+            }
+        }
+        return result/counter;
+    }
+//    public double average(boolean isDeposit){
+//        double result = 0;
+//        double counter = 0;
+//
+//        for (int i = 0 ; i < transactions.length ; i++){
+//
+//            if (transactions[i]> 0 && isDeposit) {
+//                result += transactions[i];
+//                counter ++;
+//
+//            }else if (transactions[i] < 0 && !isDeposit ){
+//
+//            }
+//        }
+//        return result /counter;
+//
+//    }
 }
+

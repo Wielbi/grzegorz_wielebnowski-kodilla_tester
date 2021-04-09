@@ -14,14 +14,17 @@ class BankTestSuite {
     @Test
    public void getTotalCashAmount() {
         Bank bank = new Bank();
+        CashMachine cashMachine = new CashMachine();
+        cashMachine.depositTransaction(100);
+        cashMachine.withDrawTransaction(50);
+        cashMachine.withDrawTransaction(20);
         bank.setCashMachines(new CashMachine[]{
-                new CashMachine(),
-                new CashMachine()});
+                cashMachine});
         int TotalCashAmount = 0;
         for (int i  = 0; i < bank.getMachineAmount(); i++){
             TotalCashAmount += bank.cashMachines[i].getCashAmount();
         }
-        assertEquals(2000,TotalCashAmount);
+        assertEquals(30,TotalCashAmount);
     }
     @Test
     public void getTotalWithdrawsCount(){
@@ -56,5 +59,32 @@ class BankTestSuite {
 
               }
        assertEquals(1,TotalDepositsCount );
+    }
+
+    @Test
+    public void testDepositAverage(){
+        CashMachine cashMachine = new CashMachine();
+        cashMachine.depositTransaction(100);
+        cashMachine.depositTransaction(50);
+
+        cashMachine.withDrawTransaction(300);
+        cashMachine.withDrawTransaction(100);
+
+        double result = cashMachine.depositAverage();
+
+        assertEquals(75,result);
+
+    }
+    @Test
+    public void testWithdrawsAverage(){
+        CashMachine cashMachine = new CashMachine();
+        cashMachine.withDrawTransaction(50);
+        cashMachine.withDrawTransaction(100);
+
+        cashMachine.depositTransaction(100);
+        cashMachine.depositTransaction(100);
+        double result = cashMachine.withdrawsAverage();
+        assertEquals(-75,result);
+
     }
 }
