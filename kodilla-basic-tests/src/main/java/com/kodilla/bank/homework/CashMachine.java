@@ -48,7 +48,6 @@ public class CashMachine {
     public void withDrawTransaction(int amount){
         transactions[transactionPosition] = -amount;
         transactionPosition ++;
-
     }
 
     public int[] getTransactions() {

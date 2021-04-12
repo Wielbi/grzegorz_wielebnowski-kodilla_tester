@@ -1,6 +1,10 @@
 package com.kodilla.bank.homework;
 public class Bank {
-    public CashMachine[] cashMachines;
+    private CashMachine[] cashMachines;
+
+    public CashMachine[] getCashMachines() {
+        return cashMachines;
+    }
 
     public int getMachineAmount(){
         return cashMachines.length;
@@ -16,21 +20,23 @@ public class Bank {
     }
     public int getTotalCashAmount() {
         int result = 0;
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < cashMachines.length; i++) {
             result += cashMachines[i].getCashAmount();
         }
         return result;
     }
+
     public int getTotalWithdrawsCount() {
         int result = 0;
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < cashMachines.length; i++) {
             result += cashMachines[i].getWithdrawsCount();
         }
         return result;
     }
+
     public int getTotalDepositsCount() {
         int result = 0;
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < cashMachines.length; i++) {
             result += cashMachines[i].getDepositCount();
         }
         return result;

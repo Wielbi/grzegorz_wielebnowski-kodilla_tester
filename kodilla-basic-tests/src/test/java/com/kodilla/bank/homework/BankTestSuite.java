@@ -20,23 +20,19 @@ class BankTestSuite {
         cashMachine.withDrawTransaction(20);
         bank.setCashMachines(new CashMachine[]{
                 cashMachine});
-        int TotalCashAmount = 0;
-        for (int i  = 0; i < bank.getMachineAmount(); i++){
-            TotalCashAmount += bank.cashMachines[i].getCashAmount();
-        }
+        int TotalCashAmount = bank.getTotalCashAmount();
         assertEquals(30,TotalCashAmount);
     }
     @Test
     public void getTotalWithdrawsCount(){
         Bank bank = new Bank();
+        CashMachine cashMachine = new CashMachine();
+        cashMachine.depositTransaction(100);
+        cashMachine.withDrawTransaction(10);
         bank.setCashMachines(new CashMachine[]{
-                new CashMachine(),
-                new CashMachine()});
-        int TotalWithdrawsCount = 0;
-        for (int i = 0 ; i < bank.cashMachines.length; i ++){
-            TotalWithdrawsCount += bank.cashMachines[i].getTransactionCount();
-        }
-        assertEquals(6,TotalWithdrawsCount );
+                cashMachine});
+        int TotalWithdrawsCount = bank.getTotalWithdrawsCount();
+        assertEquals(1,TotalWithdrawsCount );
 
     }
     @Test
@@ -53,11 +49,7 @@ class BankTestSuite {
 
       bank.setCashMachines(new CashMachine[]{
              cashMachine});
-      int TotalDepositsCount = 0;
-      for (int i = 0 ; i < bank.cashMachines.length; i ++){
-          TotalDepositsCount += bank.cashMachines[i].getDepositCount();
-
-              }
+      int TotalDepositsCount = bank.getTotalDepositsCount();
        assertEquals(1,TotalDepositsCount );
     }
 
