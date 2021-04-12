@@ -13,21 +13,20 @@ public class Shop {
         orders.add(order);
     }
 
-    public Set<Order> getLast2YearsOrders(){
+    public Set<Order> getOrdersInDateRange(LocalDate minRangeDate, LocalDate maxRangeDate){
         Set<Order> result = new HashSet<>();
-        LocalDate now = LocalDate.now();
         for(Order o: orders) {
-            if(Period.between(o.getOrderDate(),now).getYears() <= 2) {
+            if(o.getOrderDate().isAfter(minRangeDate) && o.getOrderDate().isBefore(maxRangeDate)) {
                 result.add(o);
             }
         }
         return result;
     }
 
-    public Set<Order> getOrdersInRange(double a, double b) {
+    public Set<Order> getOrdersInRange(double minValue, double maxValue) {
         Set<Order> result = new HashSet<>();
         for(Order o: orders) {
-            if(o.getOrderAmount() >= a && o.getOrderAmount() <= b) {
+            if(o.getOrderAmount() >= minValue && o.getOrderAmount() <= maxValue) {
                 result.add(o);
             }
         }
@@ -35,7 +34,7 @@ public class Shop {
     }
 
     public long getOrdersCount(){
-        return orders.stream().count();
+        return orders.size();
     }
 
     public double getAmountOfAllOrders(){

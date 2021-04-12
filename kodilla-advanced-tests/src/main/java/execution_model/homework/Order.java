@@ -9,10 +9,10 @@ public class Order {
     private LocalDate orderDate;
     private String login;
 
-    public Order(double orderAmount, String login) {
+    public Order(double orderAmount, String login, LocalDate orderDate) {
         this.orderAmount = orderAmount;
         this.login = login;
-        this.orderDate = LocalDate.now().minusYears(2);
+        this.orderDate = orderDate;
     }
 
     public double getOrderAmount() {
